@@ -105,4 +105,17 @@ public class LinkedList {
         }
         return temp;
     }
+    public void deleteNode(int value) {
+        if (this.head == null) {
+            System.out.println("LinkedList is empty ");
+            return;
+        }
+        Node tempNode = head;
+        while (tempNode.next.data != value) {
+            tempNode = tempNode.next;
+        }
+        Node prevNode = tempNode;
+        Node nextNode = prevNode.next.next;
+        prevNode.next = nextNode;
+}
 }
