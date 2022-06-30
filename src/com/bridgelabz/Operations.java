@@ -54,4 +54,9 @@ public class Operations {
         System.out.println("After");
         linkedList.print();
 }
+
+    public static void searchNodeBaseOnValue() {
+        LinkedList linkedList = addDataAtStart();
+        linkedList.searchNode(30);
+    }
     }
