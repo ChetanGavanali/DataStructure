@@ -9,7 +9,8 @@ public class LinkedListMain {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 1 to add the data at the start");
         System.out.println("Enter 2 to add the data at the end");
-        System.out.println("Enter 3 to add the data at In Between ");
+        System.out.println("Enter 3 to add the data at In Between");
+        System.out.println("Enter 4 to delete First Element");
 
         switch (scanner.nextInt()) {
             case 1:
@@ -21,9 +22,9 @@ public class LinkedListMain {
             case 3:
                 Operations.insertInBetween();
                 break;
+            case 4 :
+                Operations.pop();
+                break;
         }
-
-    }
-
-}
-
+        }
+        }
