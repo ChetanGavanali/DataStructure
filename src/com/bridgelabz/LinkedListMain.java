@@ -11,6 +11,7 @@ public class LinkedListMain {
         System.out.println("Enter 2 to add the data at the end");
         System.out.println("Enter 3 to add the data at In Between");
         System.out.println("Enter 4 to delete First Element");
+        System.out.println("Enter 5 to delete last Element");
 
         switch (scanner.nextInt()) {
             case 1:
@@ -22,8 +23,11 @@ public class LinkedListMain {
             case 3:
                 Operations.insertInBetween();
                 break;
-            case 4 :
+            case 4:
                 Operations.pop();
+                break;
+            case 5:
+                Operations.deleteLastNode();
                 break;
         }
         }

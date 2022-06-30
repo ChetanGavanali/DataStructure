@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public class Operations {
-    public static void addDataAtStart() {
+    public static LinkedList addDataAtStart() {
 
         LinkedList linkedList = new LinkedList();
 
@@ -11,6 +11,7 @@ public class Operations {
 
         linkedList.print();
 
+        return linkedList;
     }
 
     public static void addDataAtEnd() {
@@ -46,4 +47,11 @@ public class Operations {
         System.out.println("After");
         linkedList.print();
     }
+    public static void deleteLastNode() {
+        System.out.println("before");
+        LinkedList linkedList = addDataAtStart();
+        linkedList.popLast();
+        System.out.println("After");
+        linkedList.print();
 }
+    }
