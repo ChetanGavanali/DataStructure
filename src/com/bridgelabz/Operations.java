@@ -47,16 +47,26 @@ public class Operations {
         System.out.println("After");
         linkedList.print();
     }
+
     public static void deleteLastNode() {
         System.out.println("before");
         LinkedList linkedList = addDataAtStart();
         linkedList.popLast();
         System.out.println("After");
         linkedList.print();
-}
+    }
 
     public static void searchNodeBaseOnValue() {
         LinkedList linkedList = addDataAtStart();
         linkedList.searchNode(30);
     }
+
+    public static void insertAtGivenNode() {
+        System.out.println("Before Insertion");
+        LinkedList linkedList = addDataAtStart();
+        Node newNode = new Node(40);
+        Node previousNode = linkedList.insertAfter(30, newNode);
+        System.out.println("After Insertion");
+        linkedList.print();
     }
+}

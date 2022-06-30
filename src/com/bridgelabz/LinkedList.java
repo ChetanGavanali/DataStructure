@@ -40,17 +40,20 @@ public class LinkedList {
             tail = newNode;
         }
     }
-    public void insertInBetween(Node previousNode ,Node newNode){
+
+    public void insertInBetween(Node previousNode, Node newNode) {
         Node tempNode = previousNode.next;
         previousNode.next = newNode;
         newNode.next = tempNode;
     }
+
     public Node pop() {
         Node tempNode = this.head;
         this.head = this.head.next;
         return tempNode;
 
-}
+    }
+
     public void popLast() {
         Node tempNode = head;
         while (!tempNode.next.equals(tail)) {
@@ -84,5 +87,22 @@ public class LinkedList {
         }
     }
 
-    }
+    public Node insertAfter(int value, Node newNode) {
+        Node temp = head;
+        if (head == null) {
+            System.out.println("List is empty");
+        } else {
+            while (temp != null) {
+                if (temp.data == value) {
+                    break;
+                }
+                temp = temp.next;
 
+            }
+            Node tempNodeNext = temp.next;
+            temp.next = newNode;
+            newNode.next = tempNodeNext;
+        }
+        return temp;
+    }
+}
