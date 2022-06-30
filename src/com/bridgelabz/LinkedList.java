@@ -118,4 +118,41 @@ public class LinkedList {
         Node nextNode = prevNode.next.next;
         prevNode.next = nextNode;
 }
+    public int size() {
+        if (this.head == null) {
+            System.out.println("Linked List is empty ");
+            return 0;
+        }
+        Node tempNode = head;
+        int size = 1;
+        while (tempNode.next != null) {
+            size++;
+            tempNode = tempNode.next;
+        }
+        return size;
+    }
+
+    public void sort() {
+        Node i = head, j = null;
+        if (head == null) {
+            System.out.println("Linked list is empty");
+            return;
+        }
+        while (i != null) {
+            int flag = 0;
+            j = i.next;
+            while (j != null) {
+                if (i.data > j.data) {
+                    int temp = i.data;
+                    i.data = j.data;
+                    j.data = temp;
+                    flag = 1;
+                }
+                j = j.next;
+            }
+            i = i.next;
+        }
+
+    }
+
 }

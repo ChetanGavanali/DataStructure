@@ -15,6 +15,7 @@ public class LinkedListMain {
         System.out.println("Enter 6 to Search Node");
         System.out.println("Enter 7 to add data at specific Node");
         System.out.println("Enter 8 to delete data In Between");
+        System.out.println("Enter 9 to Sort LinkedList");
 
         switch (scanner.nextInt()) {
             case 1:
@@ -41,6 +42,8 @@ public class LinkedListMain {
             case 8:
                 Operations.deleteInBetweenNode();
                 break;
+            case 9:
+                Operations.sortNode();
         }
         }
         }
